@@ -1958,6 +1958,7 @@ GameObject:
   - component: {fileID: 855898472}
   - component: {fileID: 855898473}
   - component: {fileID: 855898474}
+  - component: {fileID: 855898475}
   m_Layer: 0
   m_Name: door611
   m_TagString: Untagged
@@ -2045,9 +2046,24 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.05827}
+  m_Offset: {x: 0.019774437, y: -1.9989429}
   serializedVersion: 2
-  m_Radius: 1.3972503
+  m_Radius: 1.1797178
+--- !u!114 &855898475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855898471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd6cb4b26345487aa5693ec6c9d5107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: RoomScene
+  position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
+  nextPosition: {x: -1.86, y: -3.41, z: 0}
 --- !u!1 &1035903244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,6 +2277,7 @@ GameObject:
   - component: {fileID: 1169535023}
   - component: {fileID: 1169535024}
   - component: {fileID: 1169535025}
+  - component: {fileID: 1169535026}
   m_Layer: 0
   m_Name: door kitchen
   m_TagString: Untagged
@@ -2351,6 +2368,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -2.0168104}
   serializedVersion: 2
   m_Radius: 1.134732
+--- !u!114 &1169535026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169535022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd6cb4b26345487aa5693ec6c9d5107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: KitchenScene
+  position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
+  nextPosition: {x: -2.37, y: 1.45, z: 0}
 --- !u!1 &1338214417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,7 +2593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629364946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.18, y: 1.69, z: -10}
+  m_LocalPosition: {x: 10.18, y: 1.48, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4837,7 +4869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1731372591551150686, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.69
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 1731372591551150686, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4899,7 +4931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367416566991870191, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.69
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 367416566991870191, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
       propertyPath: m_LocalPosition.z

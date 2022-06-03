@@ -1548,7 +1548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 367416566991870191, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 367416566991870191, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1674,7 +1674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256893368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.37, y: 1.84, z: -10}
+  m_LocalPosition: {x: -2.37, y: 1.47, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2971,7 +2971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1731372591551150686, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 1731372591551150686, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3205,7 +3205,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1346539108, guid: b753a376605ef4fdf809acc4584a9152, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3289,7 +3289,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1304521523, guid: b753a376605ef4fdf809acc4584a9152, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6413,6 +6413,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2055085765}
   - component: {fileID: 2055085766}
+  - component: {fileID: 2055085767}
+  - component: {fileID: 2055085768}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -6487,3 +6489,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &2055085767
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055085764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.042240024, y: -1.7141602}
+  m_Size: {x: 2.4931433, y: 2.7164192}
+  m_Direction: 0
+--- !u!114 &2055085768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055085764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd6cb4b26345487aa5693ec6c9d5107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: HallwayScene
+  position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
+  nextPosition: {x: -1.88, y: 1.38, z: 0}
