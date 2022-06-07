@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.00098588, y: -688.06}
+  m_AnchoredPosition: {x: 68, y: -688.06}
   m_SizeDelta: {x: 248.29, y: 80.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229435586
@@ -623,8 +623,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -441.844, y: -101.234}
-  m_SizeDelta: {x: 657.102, y: 565.553}
+  m_AnchoredPosition: {x: -33.541, y: 7.311}
+  m_SizeDelta: {x: 830.019, y: 580.176}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &766186948
 Animator:
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 974010328}
   - component: {fileID: 974010330}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Portal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,8 +720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.774}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -604, y: -112}
-  m_SizeDelta: {x: 317.539, y: 391.766}
+  m_AnchoredPosition: {x: -611.677, y: -95.317}
+  m_SizeDelta: {x: 260.457, y: 357.559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974010328
 MonoBehaviour:
@@ -771,7 +771,7 @@ Animator:
   m_GameObject: {fileID: 974010326}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 41b48747bf0dabf4bbbe3eae19dc6693, type: 2}
+  m_Controller: {fileID: 9100000, guid: 91736dde4bf85cd48bfc382c0ad5e340, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1104,7 +1104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000019073, y: -769}
+  m_AnchoredPosition: {x: 68.001, y: -769}
   m_SizeDelta: {x: 248.288, y: 80.939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065580702
@@ -1212,6 +1212,7 @@ GameObject:
   - component: {fileID: 2075182882}
   - component: {fileID: 2075182885}
   - component: {fileID: 2075182884}
+  - component: {fileID: 2075182886}
   m_Layer: 5
   m_Name: Portal
   m_TagString: Untagged
@@ -1259,7 +1260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ffa6de7fd476a1e4b8c3eda6074e309c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29a5c5f287548d744bf45116c7174c27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1277,3 +1278,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075182881}
   m_CullTransparentMesh: 1
+--- !u!95 &2075182886
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075182881}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ccb39be4e21d224dac2c25ddf6a38a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
