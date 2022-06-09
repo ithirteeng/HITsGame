@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AnotherDoorTriggers : MonoBehaviour
+public class HallwayInteraction : MonoBehaviour
 {
     public GameObject messageBox;
     public TextMeshProUGUI text;

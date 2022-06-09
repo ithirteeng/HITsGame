@@ -2,17 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MovementBetweenScenes : MonoBehaviour
+public class PortalAppearance : MonoBehaviour
 {
-    public String sceneName;
-    public SavedPosition position;
-    public Vector3 nextPosition;
-    private float _waitTime = 1f;
-    private float _timer;
+    public GameObject portal;
     private bool _isTrigger;
+    private float _timer;
+    private float _waitTime = 1f;
 
+    private void Start()
+    {
+        portal.SetActive(false);
+    }
 
     private void Update()
     {
@@ -21,7 +22,7 @@ public class MovementBetweenScenes : MonoBehaviour
             _timer += Time.deltaTime;
             if (_timer > _waitTime)
             {
-                MoveBetweenScenes();
+                PortalAppearanceFunction();
             }
         }
     }
@@ -38,9 +39,8 @@ public class MovementBetweenScenes : MonoBehaviour
         _isTrigger = false;
     }
 
-    private void MoveBetweenScenes()
+    private void PortalAppearanceFunction()
     {
-        position.initialValue = nextPosition;
-        SceneManager.LoadScene(sceneName);
+        portal.SetActive(true);
     }
 }

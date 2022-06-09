@@ -7330,8 +7330,8 @@ Tilemap:
   - first: {x: -2, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7959,14 +7959,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 117
+  - m_RefCount: 116
     m_Data: {fileID: 11400000, guid: d3118466561f04c16ae9f148252d1ca5, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 9a517ed60f4734c5ea87a851e4b9d226, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 9b9359a436d914821996f85680976341, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -7988,14 +7988,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 117
+  - m_RefCount: 116
     m_Data: {fileID: -1698808079, guid: b753a376605ef4fdf809acc4584a9152, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1821751332, guid: b753a376605ef4fdf809acc4584a9152, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 29989563, guid: 4cc2db6c5fdbf41c6bf5f4f819ffa764, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 119
     m_Data:
@@ -8243,3 +8243,6 @@ MonoBehaviour:
   sceneName: HallwayScene
   position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
   nextPosition: {x: -1.88, y: 1.38, z: 0}
+  waitTime: 1
+  _timer: 0
+  _isTrigger: 0

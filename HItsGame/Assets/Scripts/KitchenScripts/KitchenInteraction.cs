@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MessagesApperarance : MonoBehaviour
+public class KitchenInteraction : MonoBehaviour
 {
     public GameObject messageBox;
 
