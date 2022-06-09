@@ -307,6 +307,7 @@ MonoBehaviour:
   messageBox: {fileID: 1357871991}
   text: {fileID: 1769414373}
   room: 608
+  IsPortalTriggered: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &192636994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,6 +1869,7 @@ MonoBehaviour:
   messageBox: {fileID: 1357871991}
   text: {fileID: 1769414373}
   room: 610
+  IsPortalTriggered: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &532543854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +1987,7 @@ MonoBehaviour:
   messageBox: {fileID: 1357871991}
   text: {fileID: 1769414373}
   room: 607
+  IsPortalTriggered: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &663791147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,6 +2324,7 @@ MonoBehaviour:
   messageBox: {fileID: 1357871991}
   text: {fileID: 1769414373}
   room: 606
+  IsPortalTriggered: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &1071149231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,6 +2526,7 @@ MonoBehaviour:
   messageBox: {fileID: 1357871991}
   text: {fileID: 1769414373}
   room: 609
+  IsPortalTriggered: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &1169535022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,6 +2660,7 @@ MonoBehaviour:
   messageBox: {fileID: 1357871991}
   text: {fileID: 1769414373}
   room: kitchen
+  IsPortalTriggered: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &1338214417
 GameObject:
   m_ObjectHideFlags: 0

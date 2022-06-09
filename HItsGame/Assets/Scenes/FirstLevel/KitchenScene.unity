@@ -5344,6 +5344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portal: {fileID: 819265404}
   message: {fileID: 1255949430}
+  IsPortalTriggerred: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!1 &1889491347
 GameObject:
   m_ObjectHideFlags: 0

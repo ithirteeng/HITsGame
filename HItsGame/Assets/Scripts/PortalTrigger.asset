@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de536a7fc4b334ee49dc6912f39ba3a7, type: 3}
   m_Name: PortalTrigger
   m_EditorClassIdentifier: 
-  isPortalTriggered: 0
+  isPortalTriggered: 1

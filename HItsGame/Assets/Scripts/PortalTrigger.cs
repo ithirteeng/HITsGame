@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PortalTrigger : ScriptableObject
 {
-    public bool isPortalTriggered = false;
+    public bool isPortalTriggered;
 }

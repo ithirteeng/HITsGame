@@ -11,6 +11,7 @@ public class HallwayInteraction : MonoBehaviour
     public GameObject messageBox;
     public TextMeshProUGUI text;
     public string room;
+    public PortalTrigger IsPortalTriggered;
 
     private void Start()
     {
@@ -22,7 +23,14 @@ public class HallwayInteraction : MonoBehaviour
         messageBox.SetActive(true);
         if (room == "kitchen")
         {
-            text.text = "Чем тут пахнет?";
+            if (!IsPortalTriggered.isPortalTriggered)
+            {
+                text.text = "Чем тут пахнет?";
+            }
+            else
+            {
+                text.text = "Там портал, туда нам надо";
+            }
         }
         else
         {
