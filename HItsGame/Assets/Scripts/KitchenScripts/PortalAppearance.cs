@@ -1,41 +1,59 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PortalAppearance : MonoBehaviour
 {
     public GameObject portal;
+    public TextMeshProUGUI message;
     private bool _isTrigger;
-    private float _timer;
-    private float _waitTime = 1f;
+    private Collider2D trigger;
+    private string _message = "Ёпта";
+    public PortalTrigger IsPortalTriggerred;
+
 
     private void Start()
     {
-        portal.SetActive(false);
+        trigger = GetComponent<Collider2D>();
+        if (!IsPortalTriggerred.isPortalTriggered)
+        {
+            
+            portal.SetActive(false);
+        }
+        else
+        {
+            trigger.enabled = false;
+            portal.SetActive(true);
+        }
     }
 
     private void Update()
     {
         if (_isTrigger)
         {
-            _timer += Time.deltaTime;
-            if (_timer > _waitTime)
+            if (Input.GetKeyUp(KeyCode.E))
             {
+                message.text = _message;
                 PortalAppearanceFunction();
+                IsPortalTriggerred.isPortalTriggered = true;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        _timer = 0f;
         _isTrigger = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        _timer = 0f;
+        if (message.text == _message)
+        {
+            trigger.enabled = false;
+        }
+
         _isTrigger = false;
     }
 
