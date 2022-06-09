@@ -61,4 +61,9 @@ public class PortalAppearance : MonoBehaviour
     {
         portal.SetActive(true);
     }
+
+    private void OnApplicationQuit()
+    {
+        IsPortalTriggerred.isPortalTriggered = false;
+    }
 }
