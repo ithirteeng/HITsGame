@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MainMenu_Portal
+  m_Name: MainMunu_Portal
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 3989f387aa4827645a28bbeb426002bf, type: 3}
+      value: {fileID: 21300000, guid: 29a5c5f287548d744bf45116c7174c27, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 6f642bbe161730d43b0c812074f66303, type: 3}
     - time: 0.6666667
       value: {fileID: 21300000, guid: c6a0095ce3bc39947a5bae243543b2f9, type: 3}
     - time: 1
@@ -52,7 +54,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 3989f387aa4827645a28bbeb426002bf, type: 3}
+    - {fileID: 21300000, guid: 29a5c5f287548d744bf45116c7174c27, type: 3}
+    - {fileID: 21300000, guid: 6f642bbe161730d43b0c812074f66303, type: 3}
     - {fileID: 21300000, guid: c6a0095ce3bc39947a5bae243543b2f9, type: 3}
     - {fileID: 21300000, guid: db36e32566fa3cf4b9a2c5405e879f15, type: 3}
     - {fileID: 21300000, guid: 3989f387aa4827645a28bbeb426002bf, type: 3}
