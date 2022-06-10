@@ -7,6 +7,7 @@ using UnityEngine;
 public class PortalAppearance : MonoBehaviour
 {
     public GameObject portal;
+    public GameObject pressEMessage;
     public TextMeshProUGUI message;
     private bool _isTrigger;
     private Collider2D trigger;
@@ -19,7 +20,6 @@ public class PortalAppearance : MonoBehaviour
         trigger = GetComponent<Collider2D>();
         if (!IsPortalTriggerred.isPortalTriggered)
         {
-            
             portal.SetActive(false);
         }
         else
@@ -36,6 +36,7 @@ public class PortalAppearance : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.E))
             {
                 message.text = _message;
+                pressEMessage.SetActive(false);
                 PortalAppearanceFunction();
                 IsPortalTriggerred.isPortalTriggered = true;
             }
