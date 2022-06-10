@@ -9,9 +9,11 @@ public class PortalAppearance : MonoBehaviour
     public GameObject portal;
     public GameObject pressEMessage;
     public TextMeshProUGUI message;
+    public GameObject firstPot;
+    public GameObject secondPot;
     private bool _isTrigger;
     private Collider2D trigger;
-    private string _message = "Ёпта";
+    private string _message = "Ёпта....";
     public PortalTrigger IsPortalTriggerred;
 
 
@@ -21,9 +23,13 @@ public class PortalAppearance : MonoBehaviour
         if (!IsPortalTriggerred.isPortalTriggered)
         {
             portal.SetActive(false);
+            firstPot.SetActive(true);
+            secondPot.SetActive(false);
         }
         else
         {
+            firstPot.SetActive(false);
+            secondPot.SetActive(true);
             trigger.enabled = false;
             portal.SetActive(true);
         }
@@ -37,6 +43,8 @@ public class PortalAppearance : MonoBehaviour
             {
                 message.text = _message;
                 pressEMessage.SetActive(false);
+                firstPot.SetActive(false);
+                secondPot.SetActive(true);
                 PortalAppearanceFunction();
                 IsPortalTriggerred.isPortalTriggered = true;
             }
