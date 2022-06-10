@@ -1846,7 +1846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: HallwayScene
   position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
-  nextPosition: {x: 10.18, y: 1.38, z: 0}
+  nextPosition: {x: 10.18, y: 1.48, z: 0}
 --- !u!1 &1331550668
 GameObject:
   m_ObjectHideFlags: 0
