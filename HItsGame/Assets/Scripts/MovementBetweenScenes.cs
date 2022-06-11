@@ -9,17 +9,19 @@ public class MovementBetweenScenes : MonoBehaviour
     public String sceneName;
     public SavedPosition position;
     public Vector3 nextPosition;
-    private float _waitTime = 1f;
-    private float _timer;
-    private bool _isTrigger;
+    public GameObject preesEText;
+    private bool _IsTnTrigger = false;
 
+    private void Start()
+    {
+        preesEText.SetActive(false);
+    }
 
     private void Update()
     {
-        if (_isTrigger)
+        if (_IsTnTrigger)
         {
-            _timer += Time.deltaTime;
-            if (_timer > _waitTime)
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 MoveBetweenScenes();
             }
@@ -28,14 +30,14 @@ public class MovementBetweenScenes : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        _timer = 0f;
-        _isTrigger = true;
+        _IsTnTrigger = true;
+        preesEText.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        _timer = 0f;
-        _isTrigger = false;
+        _IsTnTrigger = false;
+        preesEText.SetActive(false);
     }
 
     private void MoveBetweenScenes()

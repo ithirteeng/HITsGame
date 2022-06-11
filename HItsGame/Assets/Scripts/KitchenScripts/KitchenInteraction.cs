@@ -7,6 +7,7 @@ public class KitchenInteraction : MonoBehaviour
 {
     public GameObject messageBox;
     public GameObject pressEMessage;
+    public PortalTrigger isPortalTrigger;
 
     private void Start()
     {
@@ -26,6 +27,9 @@ public class KitchenInteraction : MonoBehaviour
     private void makeActive(bool flag)
     {
         messageBox.SetActive(flag);
-        pressEMessage.SetActive(flag);
+        if (!isPortalTrigger.isPortalTriggered)
+        {
+            pressEMessage.SetActive(flag);
+        }
     }
 }

@@ -58,6 +58,7 @@ public class PortalAppearance : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        
         _isTrigger = true;
     }
 

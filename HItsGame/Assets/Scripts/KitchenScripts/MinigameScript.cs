@@ -14,7 +14,6 @@ public class MinigameScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             slider.value += 25;
-            Debug.Log(PlayerAppearance.player);
             if (slider.value >= 100)
             {
                 SceneManager.UnloadSceneAsync("MinigameScene");
