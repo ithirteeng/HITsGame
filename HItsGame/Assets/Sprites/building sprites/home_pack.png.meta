@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -3546,10 +3546,10 @@ TextureImporter:
       home_pack_46: -1116784009
       home_pack_1: -805280785
       home_pack_70: 943964970
-      home_pack_17: -1311650066
-      home_pack_42: -1269300160
-      home_pack_32: -1183131795
       home_pack_131: 594177405
+      home_pack_17: -1311650066
+      home_pack_32: -1183131795
+      home_pack_42: -1269300160
       home_pack_28: -452288975
       home_pack_127: 881074292
       home_pack_100: -456704333
