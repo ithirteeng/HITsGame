@@ -13,14 +13,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-       animator = GetComponent<Animator>();
-       rb = GetComponent<Rigidbody2D>();
-       transform.position = position.initialValue;
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        transform.position = position.initialValue;
     }
 
     void Update()
     {
-        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("Horizontal", movement.x);

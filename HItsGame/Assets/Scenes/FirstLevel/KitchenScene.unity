@@ -2898,22 +2898,14 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 104584005}
     m_ColliderPaths:
-    - - X: -29999900
-        Y: -80000041
-      - X: -29999900
+    - - X: 110000000
+        Y: 80000000
+      - X: -120000000
+        Y: 80000000
+      - X: -120000000
         Y: -80000000
       - X: 110000000
         Y: -80000000
-      - X: 110000000
-        Y: 80000000
-      - X: -119999900
-        Y: 80000000
-      - X: -119999900
-        Y: -80000041
-      - X: -119999959
-        Y: -80000100
-      - X: -29999959
-        Y: -80000100
     - - X: -90000000
         Y: -50000000
       - X: -90000000
@@ -2924,10 +2916,10 @@ CompositeCollider2D:
         Y: -50000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -11.99999, y: -7.9999747}
-      - {x: 11, y: -7.9999704}
+    - - {x: 10.99997, y: -8}
       - {x: 10.99997, y: 8}
-      - {x: -11.99999, y: 7.9999704}
+      - {x: -12, y: 7.9999704}
+      - {x: -11.99997, y: -8}
     - - {x: 8, y: -4.9999704}
       - {x: -9, y: -4.9999704}
       - {x: -8.99997, y: 2}
@@ -4496,6 +4488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7541382823384202993, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8646918390827750690, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
       propertyPath: m_SortingOrder
       value: 6
@@ -5735,6 +5731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageBox: {fileID: 312860990}
   pressEMessage: {fileID: 1225560145}
+  player: {fileID: 1641737840}
 --- !u!58 &1584860281
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5768,7 +5765,13 @@ MonoBehaviour:
   message: {fileID: 1255949430}
   firstPot: {fileID: 901096848}
   secondPot: {fileID: 901975288}
+  player: {fileID: 1641737840}
   IsPortalTriggerred: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
+--- !u!1 &1641737840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7541382823384202993, guid: 22440eeea81904d0cbae90154e6579c4, type: 3}
+  m_PrefabInstance: {fileID: 694532798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1889491347
 GameObject:
   m_ObjectHideFlags: 0

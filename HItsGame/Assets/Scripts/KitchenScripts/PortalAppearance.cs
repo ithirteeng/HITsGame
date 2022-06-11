@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalAppearance : MonoBehaviour
 {
@@ -11,14 +12,16 @@ public class PortalAppearance : MonoBehaviour
     public TextMeshProUGUI message;
     public GameObject firstPot;
     public GameObject secondPot;
+    public GameObject player;
     private bool _isTrigger;
     private Collider2D trigger;
-    private string _message = "Ёпта....";
+    private const string MESSAGE = "Ёпта....";
     public PortalTrigger IsPortalTriggerred;
 
 
     private void Start()
     {
+        PlayerAppearance.Init(player);
         trigger = GetComponent<Collider2D>();
         if (!IsPortalTriggerred.isPortalTriggered)
         {
@@ -41,7 +44,9 @@ public class PortalAppearance : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
-                message.text = _message;
+                SceneManager.LoadScene("MinigameScene", LoadSceneMode.Additive);
+                player.SetActive(false);
+                message.text = MESSAGE;
                 pressEMessage.SetActive(false);
                 firstPot.SetActive(false);
                 secondPot.SetActive(true);
@@ -58,10 +63,11 @@ public class PortalAppearance : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (message.text == _message)
+        if (message.text == MESSAGE)
         {
             trigger.enabled = false;
         }
+
 
         _isTrigger = false;
     }
