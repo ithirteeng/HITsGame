@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PortalAppearance : MonoBehaviour
 {
+    public Camera camera;
     public GameObject portal;
     public GameObject pressEMessage;
     public TextMeshProUGUI message;
@@ -21,7 +22,7 @@ public class PortalAppearance : MonoBehaviour
 
     private void Start()
     {
-        PlayerAppearance.Init(player);
+        PlayerAppearance.Init(player, camera);
         trigger = GetComponent<Collider2D>();
         if (!IsPortalTriggerred.isPortalTriggered)
         {
@@ -45,6 +46,7 @@ public class PortalAppearance : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.E))
             {
                 SceneManager.LoadScene("MinigameScene", LoadSceneMode.Additive);
+                camera.enabled = false;
                 player.SetActive(false);
                 message.text = MESSAGE;
                 pressEMessage.SetActive(false);

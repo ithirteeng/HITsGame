@@ -5513,6 +5513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758673b9c4a59489eaa578b1b487995a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 256893370}
   portal: {fileID: 819265404}
   pressEMessage: {fileID: 2036888194}
   message: {fileID: 1255949430}
