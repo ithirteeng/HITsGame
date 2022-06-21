@@ -12,7 +12,7 @@ public class PressEScipt : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         canvas.SetActive(true);
     }
