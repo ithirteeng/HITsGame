@@ -25,6 +25,7 @@ public class MinigameScript : MonoBehaviour
     private float _timeToNextBug;
     private float _deltaTimeMoving = 0f;
     private float _deltaTimeRotation = 0f;
+    private List<GameObject> deadBugs = new List<GameObject>();
     private class Bug
     {
         public GameObject view;
@@ -45,7 +46,6 @@ public class MinigameScript : MonoBehaviour
 
         public void move()
         {
-            view.transform.name = "bug";
             view.transform.position = new Vector3(
                 (float)(view.transform.position.x + speed * Math.Cos(toRad(direction))),
                 (float)(view.transform.position.y + speed * Math.Sin(toRad(direction))),
@@ -88,13 +88,13 @@ public class MinigameScript : MonoBehaviour
         if (_timeToNextBug < 0)
         {
             Bug newBug = new Bug();
-            int a = Random.Range(0, 3);
+            int a = Random.Range(0, 4);
             newBug.init(Instantiate(BugModel[0]), 0.1f, 0, -a*90 - 90 );
             _list.Add(newBug);
-            _timeToNextBug = Random.Range(0.5f, 1.5f);
+            _timeToNextBug = Random.Range(0.5f, 1f);
             var pos = borders[a].transform.position;
             if (a % 2 == 0) pos.x += Random.Range(0f, 7f);
-            else pos.y += Random.Range(0f, 3f);
+            else pos.y += Random.Range(0f, 4f);
             newBug.view.transform.position = pos;
             newBug.view.transform.rotation = Quaternion.Euler(0, 0, -90*a - 180);
         }
@@ -154,7 +154,8 @@ public class MinigameScript : MonoBehaviour
                     bugDead.transform.rotation = _list[i].view.transform.rotation;
                     Destroy(_list[i].view);
                     _list.Remove(_list[i]);
-                    slider.value += 10f;
+                    slider.value += 5f;
+                    deadBugs.Add(bugDead);
                 }
             }
         }
@@ -165,8 +166,14 @@ public class MinigameScript : MonoBehaviour
         {
             Destroy(_list[i].view);
         }
+
+        for (int i = 0; i < deadBugs.Count; i++)
+        {
+            Destroy(deadBugs[i]);
+        }
         SceneManager.UnloadSceneAsync("MinigameScene");
         PlayerAppearance.player.SetActive(true);
+        PlayerAppearance.camera.enabled = true;
     }
     
 }
