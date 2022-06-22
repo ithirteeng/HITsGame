@@ -4489,6 +4489,8 @@ GameObject:
   - component: {fileID: 819265405}
   - component: {fileID: 819265408}
   - component: {fileID: 819265409}
+  - component: {fileID: 819265411}
+  - component: {fileID: 819265412}
   m_Layer: 0
   m_Name: portal
   m_TagString: Untagged
@@ -4635,6 +4637,34 @@ PolygonCollider2D:
       - {x: 1.4837688, y: -1.5054773}
       - {x: 1.8843459, y: -0.44957942}
       - {x: 1.5461378, y: 1.3285813}
+--- !u!70 &819265411
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819265404}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8125, y: 2.625}
+  m_Direction: 0
+--- !u!114 &819265412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819265404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc20c16db220e439881bf3a7b766c66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &901096848
 GameObject:
   m_ObjectHideFlags: 0
