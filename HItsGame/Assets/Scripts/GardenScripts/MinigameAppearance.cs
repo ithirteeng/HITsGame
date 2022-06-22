@@ -35,10 +35,12 @@ public class MinigameAppearance : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         isInTirgger = true;
+        pressECanvas.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        pressECanvas.SetActive(false);
         isInTirgger = false;
     }
 }
