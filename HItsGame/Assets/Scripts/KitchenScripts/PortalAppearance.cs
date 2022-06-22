@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PortalAppearance : MonoBehaviour
 {
     public Camera camera;
+    public Collider2D doorTrigger;
     public GameObject portal;
     public GameObject pressEMessage;
     public TextMeshProUGUI message;
@@ -45,6 +46,7 @@ public class PortalAppearance : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
+                doorTrigger.enabled = false;
                 SceneManager.LoadScene("MinigameScene", LoadSceneMode.Additive);
                 camera.enabled = false;
                 player.SetActive(false);
