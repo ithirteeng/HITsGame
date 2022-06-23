@@ -21,13 +21,10 @@ public class Generator : MonoBehaviour
         Invoke("AttemptSpawn", spawnInterval);
     }
 
-    void Update()
-    {
-        
-    }
-
     void SpawnStar()
     {
+        if (stars.Length == 0)
+            return;
         int randomNumber = UnityEngine.Random.Range(0, 100);
         int index = 0;
 
