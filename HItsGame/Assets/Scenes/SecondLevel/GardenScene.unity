@@ -75709,6 +75709,7 @@ GameObject:
   - component: {fileID: 463080503}
   - component: {fileID: 463080505}
   - component: {fileID: 463080504}
+  - component: {fileID: 463080506}
   m_Layer: 0
   m_Name: secondHouse
   m_TagString: Untagged
@@ -75912,6 +75913,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &463080506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463080497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd6cb4b26345487aa5693ec6c9d5107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: ToiletScene
+  position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
+  nextPosition: {x: 6.47, y: -1.39, z: -0.073}
+  preesEText: {fileID: 642765283}
 --- !u!1 &512935640
 GameObject:
   m_ObjectHideFlags: 0

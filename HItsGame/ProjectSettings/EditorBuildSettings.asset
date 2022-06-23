@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondLevel/BarnScene.unity
     guid: 78c5832e3898a4772893d6ea32b73e8d
+  - enabled: 1
+    path: Assets/Scenes/SecondLevel/ToiletScene.unity
+    guid: f6729632f8fd942869db2f7ceb8853dc
   m_configObjects: {}

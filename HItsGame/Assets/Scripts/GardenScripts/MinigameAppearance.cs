@@ -11,6 +11,7 @@ public class MinigameAppearance : MonoBehaviour
     public Camera camera;
     public GameObject player;
     public GameObject pressECanvas;
+    public Collider2D toiletTrigger;
     private bool isInTirgger;
 
     private void Start()
@@ -27,6 +28,10 @@ public class MinigameAppearance : MonoBehaviour
                 if (minigameScene == "TetrisScene")
                 {
                     openDoorScript.isTetrisPassed = true;
+                }
+                else if (minigameScene == "EggScene")
+                {
+                    toiletTrigger.enabled = true
                 }
                 // SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
                 // player.SetActive(false);
