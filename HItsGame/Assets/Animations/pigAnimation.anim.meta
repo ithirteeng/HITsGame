@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:HItsGame/Assets/Animations/pigAnimation.anim.meta
 guid: 07968126928b64533821f9a59215f6df
+=======
+guid: 53976c1047e627e4fa3836fc73670613
+>>>>>>> origin/main:HItsGame/Assets/Animations/MainMenu/MainMunu_Portal.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000

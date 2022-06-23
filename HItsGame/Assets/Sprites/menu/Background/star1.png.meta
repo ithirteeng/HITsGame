@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:HItsGame/Assets/Sprites/menu/Background/star1.png.meta
 guid: abb37eead50ed5a4bb932dfd25006d0d
+=======
+guid: 26fa0277e5499f74e8838b974bc1630a
+>>>>>>> origin/main:HItsGame/Assets/Sprites/menu/Buttons/load game.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
