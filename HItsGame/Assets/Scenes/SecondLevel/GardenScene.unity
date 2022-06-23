@@ -323,8 +323,9 @@ GameObject:
   - component: {fileID: 162392138}
   - component: {fileID: 162392140}
   - component: {fileID: 162392139}
+  - component: {fileID: 162392141}
   m_Layer: 0
-  m_Name: firstHouse
+  m_Name: toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,6 +572,84 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &162392141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162392132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fc985000f2d4ba59d58c7159cc4685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 309452364}
+--- !u!1 &309452363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309452365}
+  - component: {fileID: 309452364}
+  - component: {fileID: 309452366}
+  m_Layer: 0
+  m_Name: toiletTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!70 &309452364
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309452363}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1060524, y: 0}
+  m_Size: {x: 1.5798073, y: 1.5798073}
+  m_Direction: 0
+--- !u!4 &309452365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309452363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.08, y: 10.54, z: -0.20709434}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309452366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309452363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd6cb4b26345487aa5693ec6c9d5107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: ToiletScene
+  position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
+  nextPosition: {x: 6.47, y: -1.39, z: -0.726}
+  preesEText: {fileID: 642765283}
 --- !u!1 &314863631
 GameObject:
   m_ObjectHideFlags: 0
@@ -75705,11 +75784,11 @@ GameObject:
   m_Component:
   - component: {fileID: 463080498}
   - component: {fileID: 463080500}
-  - component: {fileID: 463080502}
   - component: {fileID: 463080503}
   - component: {fileID: 463080505}
   - component: {fileID: 463080504}
   - component: {fileID: 463080506}
+  - component: {fileID: 463080507}
   m_Layer: 0
   m_Name: secondHouse
   m_TagString: Untagged
@@ -75784,22 +75863,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &463080502
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463080497}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.024005918, y: -0.2494226}
-  m_Size: {x: 0.27190858, y: 0.49865097}
-  m_Direction: 0
 --- !u!60 &463080503
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -75929,6 +75992,19 @@ MonoBehaviour:
   position: {fileID: 11400000, guid: 73e9087e514e94d5ea68140c2243b202, type: 2}
   nextPosition: {x: 6.47, y: -1.39, z: -0.073}
   preesEText: {fileID: 642765283}
+--- !u!114 &463080507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463080497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1fc985000f2d4ba59d58c7159cc4685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 162392137}
 --- !u!1 &512935640
 GameObject:
   m_ObjectHideFlags: 0

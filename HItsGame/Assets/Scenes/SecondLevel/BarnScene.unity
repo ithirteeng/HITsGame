@@ -7748,6 +7748,7 @@ MonoBehaviour:
   camera: {fileID: 1001833943}
   player: {fileID: 1108528729}
   pressECanvas: {fileID: 462257220}
+  toiletTrigger: {fileID: 566812585}
 --- !u!70 &1347643215
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
