@@ -10,6 +10,7 @@ public class StartScript : MonoBehaviour
     public GameObject text;
     public TextMeshProUGUI message;
     public Collider2D collider2D;
+ 
 
     private void Start()
     {

@@ -27,6 +27,10 @@ public class messageAppearance : MonoBehaviour
         {
             text.text = "Поник";
         }
+        else if (messageType == "TETRIS")
+        {
+            text.text = "Найти бы курятник. Неужели сено убирать придётся....";
+        }
 
         canvas.SetActive(true);
     }

@@ -24,10 +24,14 @@ public class MinigameAppearance : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
-                player.SetActive(false);
-                pressECanvas.SetActive(false);
-                camera.enabled = false;
+                if (minigameScene == "TetrisScene")
+                {
+                    openDoorScript.isTetrisPassed = true;
+                }
+                // SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
+                // player.SetActive(false);
+                // pressECanvas.SetActive(false);
+                // camera.enabled = false;
             }
         }
     }
