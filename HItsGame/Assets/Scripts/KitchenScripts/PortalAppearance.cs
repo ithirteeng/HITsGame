@@ -17,12 +17,14 @@ public class PortalAppearance : MonoBehaviour
     public GameObject player;
     private bool _isTrigger;
     private Collider2D trigger;
+    public Collider2D trigger2;
     private const string MESSAGE = "Ёпта....";
     public PortalTrigger IsPortalTriggerred;
 
 
     private void Start()
     {
+        trigger2.enabled = false;
         PlayerAppearance.Init(player, camera);
         trigger = GetComponent<Collider2D>();
         if (!IsPortalTriggerred.isPortalTriggered)
@@ -31,9 +33,7 @@ public class PortalAppearance : MonoBehaviour
             firstPot.SetActive(true);
             secondPot.SetActive(false);
         }
-        else
-        {
-            trigger2.enabled = false;
+        else {
             firstPot.SetActive(false);
             secondPot.SetActive(true);
             portal.SetActive(true);
@@ -55,6 +55,7 @@ public class PortalAppearance : MonoBehaviour
                 firstPot.SetActive(false);
                 secondPot.SetActive(true);
                 PortalAppearanceFunction();
+                trigger2.enabled = true;
                 IsPortalTriggerred.isPortalTriggered = true;
             }
         }
