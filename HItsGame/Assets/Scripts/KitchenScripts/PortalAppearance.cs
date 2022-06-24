@@ -33,9 +33,9 @@ public class PortalAppearance : MonoBehaviour
         }
         else
         {
+            trigger2.enabled = false;
             firstPot.SetActive(false);
             secondPot.SetActive(true);
-            trigger.enabled = false;
             portal.SetActive(true);
         }
     }
