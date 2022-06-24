@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,8 @@ public class GameMode : MonoBehaviour
     public TextMeshProUGUI counter;
     public TextMeshProUGUI timer;
 
+    public bool isSeparateGame;
+
     private float _currentPlayerX;
     private float _currentPlayerY;
     private int _lastInd;
@@ -21,6 +24,7 @@ public class GameMode : MonoBehaviour
     private float _spawnDeltaTime = 1f;
     private float timerDeltaTime;
     private int secondTimer;
+    private int delta = 100;
     
     
     void Start()
@@ -30,6 +34,7 @@ public class GameMode : MonoBehaviour
         counter.text = "0";
         timer.text = "--:--";
         _deltaTime = 0f;
+        if (isSeparateGame) timer.text = "";
     }
     void Update()
     {
@@ -42,10 +47,12 @@ public class GameMode : MonoBehaviour
         if (_deltaTime >= _spawnDeltaTime)
         {
             SpawnEgg();
-            _spawnDeltaTime = Random.Range(0.7f, 1.3f);
+            _spawnDeltaTime = Random.Range(0.5f, 1.1f);
             //_spawnDeltaTime = 0.7f;
             _deltaTime = 0f;
         }
+        if (isSeparateGame) timer.text = "";
+
     }
     
     private void OnTriggerEnter2D(Collider2D col)
@@ -70,6 +77,10 @@ public class GameMode : MonoBehaviour
             timer.text += secondTimer.ToString();
             timerDeltaTime = 0;
         }
+        if (secondTimer == 0 && !isSeparateGame)
+        {
+            closeScene();
+        }
     }
     void updatePlayer()
     {
@@ -78,9 +89,9 @@ public class GameMode : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             _currentPlayerY = Math.Abs(_currentPlayerY) * -1;
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-            _currentPlayerX = Math.Abs(_currentPlayerX) * -1;
+            _currentPlayerX = Math.Abs(_currentPlayerX - delta) * -1 + delta;
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-            _currentPlayerX = Math.Abs(_currentPlayerX) * 1;
+            _currentPlayerX = Math.Abs(_currentPlayerX - delta) * 1 + delta;
 
         Player.transform.position = new Vector3(_currentPlayerX, _currentPlayerY, Player.transform.position.z);
     }
@@ -100,4 +111,12 @@ public class GameMode : MonoBehaviour
             spawns[ind].transform.position.y + Random.Range(0f, 0.5f),
             spawns[ind].transform.position.z);
     }
+    
+    void closeScene()
+    {
+        SceneManager.UnloadSceneAsync("EggScene");
+        PlayerAppearance.player.SetActive(true);
+        PlayerAppearance.camera.enabled = true;
+    }
 }
+

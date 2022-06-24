@@ -32,10 +32,10 @@ public class minigamesAppearance : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
-                // player.SetActive(false);
-                // pressECanvas.SetActive(false);
-                // camera.enabled = false;
+                SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
+                player.SetActive(false);
+                pressECanvas.SetActive(false);
+                camera.enabled = false;
             }
         }
     }
