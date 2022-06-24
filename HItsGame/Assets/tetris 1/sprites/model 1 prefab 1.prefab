@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8453861319722750723}
   - component: {fileID: -7445396977302606485}
   m_Layer: 0
-  m_Name: model 1 prefab
+  m_Name: model 1 prefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: d1e407303c71e2b42bbca09e68478b7c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7b3fb73d189bb4d418635d2eefe7a9b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47843137}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
