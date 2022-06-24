@@ -1,13 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using MouseButton = UnityEngine.UIElements.MouseButton;
 using Random = UnityEngine.Random;
 using Slider = UnityEngine.UI.Slider;
 
@@ -171,7 +165,7 @@ public class MinigameScript : MonoBehaviour
         {
             Destroy(deadBugs[i]);
         }
-        SceneManager.UnloadSceneAsync("MinigameScene");
+        SceneManager.UnloadSceneAsync("BugScene");
         PlayerAppearance.player.SetActive(true);
         PlayerAppearance.camera.enabled = true;
     }

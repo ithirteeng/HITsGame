@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstLevel/KitchenScene.unity
     guid: 24d15b87ea0f442828046a94821445b8
   - enabled: 1
-    path: Assets/Scenes/FirstLevel/MinigameScene.unity
+    path: Assets/Scenes/FirstLevel/BugScene.unity
     guid: ee52e92a9fac74bc4a158510ca41e692
   - enabled: 1
     path: Assets/Scenes/SecondLevel/GardenScene.unity
@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondLevel/ToiletScene.unity
     guid: f6729632f8fd942869db2f7ceb8853dc
+  - enabled: 1
+    path: Assets/Scenes/MinigamesScene.unity
+    guid: d42a840397bba412581a50ce6550483f
   m_configObjects: {}
