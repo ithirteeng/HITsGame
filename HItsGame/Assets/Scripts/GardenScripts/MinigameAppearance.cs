@@ -11,6 +11,7 @@ public class MinigameAppearance : MonoBehaviour
     public Camera camera;
     public GameObject player;
     public GameObject pressECanvas;
+    public Collider2D trigger;
     private bool isInTirgger;
 
     private void Start()
@@ -33,6 +34,8 @@ public class MinigameAppearance : MonoBehaviour
                 {
                     toiletScript.ifPlayedInEgg = true;
                 }
+
+                trigger.enabled = false;
                 // SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
                 // player.SetActive(false);
                 // pressECanvas.SetActive(false);
