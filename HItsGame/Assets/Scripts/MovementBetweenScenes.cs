@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MovementBetweenScenes : MonoBehaviour
 {
+    public Animator animator;
     public String sceneName;
     public SavedPosition position;
     public Vector3 nextPosition;
@@ -41,6 +42,13 @@ public class MovementBetweenScenes : MonoBehaviour
     }
 
     private void MoveBetweenScenes()
+    {
+        animator.SetTrigger("Fade");
+        //position.initialValue = nextPosition;
+        //SceneManager.LoadScene(sceneName);
+    }
+
+    public void OnFadeComplete()
     {
         position.initialValue = nextPosition;
         SceneManager.LoadScene(sceneName);
