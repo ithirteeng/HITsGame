@@ -29,6 +29,7 @@ public class GameMode : MonoBehaviour
     
     void Start()
     {
+        secondTimer = 60;
         _currentPlayerX = Player.transform.position.x;
         _currentPlayerY = Player.transform.position.y;
         counter.text = "0";
@@ -63,6 +64,7 @@ public class GameMode : MonoBehaviour
 
     void UpdateTimer()
     {
+        Debug.Log(secondTimer);
         if (int.Parse(counter.text) > 3 && timer.text == "--:--")
         {
             timer.text = "01:00";
