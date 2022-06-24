@@ -171,7 +171,7 @@ public class MinigameScript : MonoBehaviour
         {
             Destroy(deadBugs[i]);
         }
-        SceneManager.UnloadSceneAsync("MinigameScene");
+        SceneManager.UnloadSceneAsync("BugScene");
         PlayerAppearance.player.SetActive(true);
         PlayerAppearance.camera.enabled = true;
     }

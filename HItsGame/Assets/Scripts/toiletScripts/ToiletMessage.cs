@@ -13,14 +13,8 @@ public class ToiletMessage : MonoBehaviour
     private void Start()
     {
         text.text = "ЧЁЁЁЁЁЁЁЁЁРТ";
-        messageCanvas.SetActive(false);
-        portal.SetActive(false);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
         messageCanvas.SetActive(true);
         portal.SetActive(true);
     }
-    
+
 }

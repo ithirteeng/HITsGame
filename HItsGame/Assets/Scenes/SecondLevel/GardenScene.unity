@@ -299,6 +299,14 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1359498785}
+    - target: {fileID: 3552337511371930518, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.778607
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552337511371930518, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8039717456120551899, guid: c7cb4c7e8c54c42faa0a4e0e77f2af4b, type: 3}
       propertyPath: m_Name
       value: CM vcam1
@@ -76143,7 +76151,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.7
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -76715,6 +76723,7 @@ MonoBehaviour:
   camera: {fileID: 571528949}
   player: {fileID: 1934567449}
   pressECanvas: {fileID: 642765283}
+  trigger: {fileID: 653589997}
 --- !u!1 &696674856
 GameObject:
   m_ObjectHideFlags: 0
