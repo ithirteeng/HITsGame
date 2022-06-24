@@ -5486,6 +5486,7 @@ MonoBehaviour:
   firstPot: {fileID: 901096848}
   secondPot: {fileID: 901975288}
   player: {fileID: 1641737840}
+  trigger2: {fileID: 555188394}
   IsPortalTriggerred: {fileID: 11400000, guid: 22e6e604b5fc44c9ba5d049568cdaaad, type: 2}
 --- !u!224 &1623510009 stripped
 RectTransform:
