@@ -1,13 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using MouseButton = UnityEngine.UIElements.MouseButton;
 using Random = UnityEngine.Random;
 using Slider = UnityEngine.UI.Slider;
 
