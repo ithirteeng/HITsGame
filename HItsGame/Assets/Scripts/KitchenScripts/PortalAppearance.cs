@@ -47,7 +47,7 @@ public class PortalAppearance : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.E))
             {
                 doorTrigger.enabled = false;
-                SceneManager.LoadScene("MinigameScene", LoadSceneMode.Additive);
+                SceneManager.LoadScene("BugScene", LoadSceneMode.Additive);
                 camera.enabled = false;
                 player.SetActive(false);
                 message.text = MESSAGE;
