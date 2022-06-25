@@ -19,9 +19,9 @@ public class GameModeTetris : MonoBehaviour
     public GameObject ERotation;
     public GameObject QRotation;
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI restartText;
-    public bool isSeparateGame;
-    public Button button;
+    public static bool isSeparateGame;
+    public GameObject button;
+    public GameObject exitButton;
 
     private class Pair
     {
@@ -56,7 +56,11 @@ public class GameModeTetris : MonoBehaviour
     private void Start()
     {
         isStopped = false;
-        restartText.text = "";
+        if (!isSeparateGame)
+        {
+            exitButton.SetActive(false);
+            button.SetActive(false);
+        }
         initTypes();
         for (int i = 0; i < _sizeOfPlane.Y; i++)
         {
@@ -79,10 +83,14 @@ public class GameModeTetris : MonoBehaviour
         makeShadow(_fallingBlock);
         _movingTimer = movingDeltaTime;
 
-        button.onClick.AddListener(delegate
+        button.GetComponent<Button>().onClick.AddListener(delegate
         {
             flush();
             Start();
+        }); 
+        exitButton.GetComponent<Button>().onClick.AddListener(delegate
+        {
+            closeScene();
         });
     }
 
@@ -175,7 +183,6 @@ public class GameModeTetris : MonoBehaviour
                 if (_shadowBlock[i][j] != null) Destroy(_shadowBlock[i][j]);
                 if (QBlock[i][j] != null) Destroy(QBlock[i][j]);
                 if (EBlock[i][j] != null) Destroy(EBlock[i][j]);
-                
             }
         }
 
@@ -209,18 +216,21 @@ public class GameModeTetris : MonoBehaviour
             {
                 if (EBlock[i][j] != null) Destroy(EBlock[i][j]);
                 if (QBlock[i][j] != null) Destroy(QBlock[i][j]);
-                if (_typesOfBlocks[_currentType.X][(_currentType.Y + 1 + 1) % 4][i, j])
+                if (_typesOfBlocks[_currentType.X][(_currentType.Y + 4) % 4][i, j])
                 {
                     EBlock[i][j] = Instantiate(blocksModel[0]);
+                    EBlock[i][j].transform.SetParent(bottomLeft.transform);
                     EBlock[i][j].transform.position = new Vector3(ERotation.transform.position.x + i * Scale,
                         ERotation.transform.position.y + j * Scale);
                     EBlock[i][j].transform.localScale = new Vector3(EBlock[i][j].transform.localScale.x * Scale,
                         EBlock[i][j].transform.localScale.y * Scale);
                 }
 
-                if (_typesOfBlocks[_currentType.X][(_currentType.Y - 1 + 1 + 4) % 4][i, j])
+                if (_typesOfBlocks[_currentType.X][(_currentType.Y + 2) % 4][i, j])
                 {
                     QBlock[i][j] = Instantiate(blocksModel[0]);
+                    QBlock[i][j].transform.SetParent(bottomLeft.transform);
+
                     QBlock[i][j].transform.position = new Vector3(QRotation.transform.position.x + i * Scale,
                         QRotation.transform.position.y + j * Scale);
                     QBlock[i][j].transform.localScale = new Vector3(QBlock[i][j].transform.localScale.x * Scale,
@@ -277,6 +287,8 @@ public class GameModeTetris : MonoBehaviour
             {
                 if (!_typesOfBlocks[_currentType.X][_currentType.Y][j, i]) continue;
                 _fallingBlock[j][i] = Instantiate(blocksModel[0]);
+                _fallingBlock[j][i].transform.SetParent(bottomLeft.transform);
+
                 _fallingBlock[j][i].transform.position = new Vector3(x + i * Scale, y - j * Scale);
                 _fallingBlock[j][i].transform.localScale = new Vector3(
                     _fallingBlock[j][i].transform.localScale.x * Scale,
@@ -296,6 +308,8 @@ public class GameModeTetris : MonoBehaviour
                 if (block[i][j] != null)
                 {
                     _shadowBlock[i][j] = Instantiate(shadowModel[0]);
+                    _shadowBlock[i][j].transform.SetParent(bottomLeft.transform);
+
                     _shadowBlock[i][j].transform.position = new Vector3(
                         block[i][j].transform.position.x,
                         block[i][j].transform.position.y);
@@ -363,7 +377,7 @@ public class GameModeTetris : MonoBehaviour
                 {
                     isStopped = true;
                     if (!isSeparateGame) closeScene();
-                    else restartText.text = "Play again.";
+                    
                 }
                 else
                 {
@@ -399,8 +413,10 @@ public class GameModeTetris : MonoBehaviour
                 if (_typesOfBlocks[_currentType.X][_currentType.Y][i, j])
                 {
                     _fallingBlock[i][j] = Instantiate(blocksModel[0]);
+                    _fallingBlock[i][j].transform.SetParent(bottomLeft.transform);
                 }
                 else _fallingBlock[i][j] = null;
+                
             }
         }
 

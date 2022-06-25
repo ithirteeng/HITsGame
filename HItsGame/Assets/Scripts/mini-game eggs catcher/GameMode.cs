@@ -8,14 +8,14 @@ using Random = UnityEngine.Random;
 
 public class GameMode : MonoBehaviour
 {
-
+    
     public GameObject Player;
     public GameObject[] spawns;
     public GameObject eggModel;
     public TextMeshProUGUI counter;
     public TextMeshProUGUI timer;
 
-    public bool isSeparateGame;
+    public static bool isSeparateGame;
 
     private float _currentPlayerX;
     private float _currentPlayerY;
@@ -107,6 +107,7 @@ public class GameMode : MonoBehaviour
         }
         _lastInd = ind;
         GameObject egg = Instantiate(eggModel);
+        egg.transform.SetParent(spawns[0].transform);
         
         egg.transform.position = new Vector3(
             spawns[ind].transform.position.x, 

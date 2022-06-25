@@ -32,6 +32,10 @@ public class minigamesAppearance : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (minigameScene == "TetrisScene")
+                {
+                    GameModeTetris.isSeparateGame = true;
+                }
                 SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
                 player.SetActive(false);
                 pressECanvas.SetActive(false);

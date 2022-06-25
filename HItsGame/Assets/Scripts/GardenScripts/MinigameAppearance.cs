@@ -32,6 +32,7 @@ public class MinigameAppearance : MonoBehaviour
                 }
                 else if (minigameScene == "EggScene")
                 {
+                    GameModeTetris.isSeparateGame = false;
                     toiletScript.ifPlayedInEgg = true;
                 }
 
