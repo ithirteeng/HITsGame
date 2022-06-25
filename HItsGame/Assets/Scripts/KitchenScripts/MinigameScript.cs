@@ -148,7 +148,7 @@ public class MinigameScript : MonoBehaviour
                     bugDead.transform.rotation = _list[i].view.transform.rotation;
                     Destroy(_list[i].view);
                     _list.Remove(_list[i]);
-                    slider.value += 50f;
+                    slider.value += 5f;
                     deadBugs.Add(bugDead);
                 }
             }
