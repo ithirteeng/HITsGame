@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         GameObject model = Instantiate(brokenEggModel);
-        model.transform.SetParent(buff);
+        model.transform.SetParent(buff.transform);
         model.transform.position = new Vector3(col.transform.position.x, -3.75f, 0f);
         Destroy(col.gameObject);
         Destroy(brokensEggs[ind]);
