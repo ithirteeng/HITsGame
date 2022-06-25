@@ -163,6 +163,7 @@ Library: lib_burst_generated
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.Services.Core.Networking.dll
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.PlayerPrefsEditor.Samples.SampleScene.dll
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --assembly-folder=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -334,6 +335,7 @@ Library: lib_burst_generated
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.Services.Core.Networking.dll
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.PlayerPrefsEditor.Samples.SampleScene.dll
 --root-assembly=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --assembly-folder=D:\projects\unity\HITsGame\HItsGame\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
