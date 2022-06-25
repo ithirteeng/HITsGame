@@ -2399,6 +2399,7 @@ MonoBehaviour:
   messageType: HORSE
   canvas: {fileID: 1015375711}
   button: {fileID: 462257220}
+  hayStack: {fileID: 919339423}
 --- !u!66 &301994276
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -6273,6 +6274,7 @@ MonoBehaviour:
   messageType: PIG
   canvas: {fileID: 1015375711}
   button: {fileID: 462257220}
+  hayStack: {fileID: 919339423}
 --- !u!61 &1272165666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7953,6 +7955,7 @@ MonoBehaviour:
   messageType: TETRIS
   canvas: {fileID: 1015375711}
   button: {fileID: 462257220}
+  hayStack: {fileID: 0}
 --- !u!1 &1379908011
 GameObject:
   m_ObjectHideFlags: 0
@@ -18878,6 +18881,7 @@ MonoBehaviour:
   messageType: HORSE
   canvas: {fileID: 1015375711}
   button: {fileID: 462257220}
+  hayStack: {fileID: 919339423}
 --- !u!66 &1508838391
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -24932,6 +24936,7 @@ MonoBehaviour:
   messageType: HORSE
   canvas: {fileID: 1015375711}
   button: {fileID: 462257220}
+  hayStack: {fileID: 919339423}
 --- !u!66 &1770801604
 CompositeCollider2D:
   m_ObjectHideFlags: 0
