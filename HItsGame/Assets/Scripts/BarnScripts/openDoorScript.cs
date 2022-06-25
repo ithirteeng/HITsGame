@@ -12,7 +12,6 @@ public class openDoorScript : MonoBehaviour
 
     private void Start()
     {
-        hayStack.SetActive(true);
         doorTrigger.enabled = false;
     }
 
