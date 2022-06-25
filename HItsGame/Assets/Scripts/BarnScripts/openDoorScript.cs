@@ -12,6 +12,7 @@ public class openDoorScript : MonoBehaviour
 
     private void Start()
     {
+        hayStack.SetActive(true);
         doorTrigger.enabled = false;
     }
 
@@ -19,7 +20,7 @@ public class openDoorScript : MonoBehaviour
     {
         if (isTetrisPassed && !isDoorTriggered)
         {
-            hayStack.transform.position = new Vector3(-6f, 0f, 0f);
+            hayStack.SetActive(false);
             doorTrigger.enabled = true;
         }
     }
